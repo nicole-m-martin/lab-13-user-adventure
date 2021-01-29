@@ -2,10 +2,10 @@
 
 const planet = {
     id: 'planet',
-    title: 'Planet Zargar',
+    title: 'Land on Planet Zargar',
     map: {
-        top: '89%',
-        left: '44%'
+        top: '31%',
+        left: '5%'
     },
     image: 'planet.png',
     description: `
@@ -38,10 +38,10 @@ const planet = {
 
 const enemy = {
     id: 'enemy',
-    title: 'Encounter enemy fleet of ships',
+    title: 'Encounter Enemy Fleet',
     map: {
-        top: '17%',
-        left: '37%'
+        top: '35%',
+        left: '70%'
     },
     image: 'enemy-fleet.png',
     description: `
@@ -64,7 +64,7 @@ const enemy = {
     }, 
     {
         id: 'communicate',
-        description: 'Send a com message to the main ship',
+        description: 'Send a peace offering message to the main enemy ship',
         result: `
           You send a peaceful message to the main ship, and they respond with a threat. Leave now and give them 30 bitcoins or they will fire. You agree and send over the money. After that you kick it into hyper-drive and get out of there.
       `,
@@ -75,10 +75,10 @@ const enemy = {
 
 const asteroid = {
     id: 'asteroid',
-    title: 'A large asteroid!',
+    title: 'Avoid A Large Asteroid!',
     map: {
-        top: '31%',
-        left: '5%'
+        top: '65%',
+        left: '34%'
     }, 
     image: 'asteroid.png',
     description: `

@@ -1,0 +1,36 @@
+body {
+  position: fixed;
+  color: #fff;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: url("/images/space-map.jpg") no-repeat center center/cover;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: "Faster One", cursive;
+}
+
+#quests {
+  position: relative;
+}
+
+a.quest {
+  position: absolute;
+  color: #dad435ff;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Orbitron", sans-serif;
+}
+
+.title {
+  border: 2px #53c3b7ff solid;
+  padding: 10px;
+  background: #ee277aff;
+  color: #53c3b7ff;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #453967ff;
+  letter-spacing: 5px;
+  border-radius: 5px;
+}

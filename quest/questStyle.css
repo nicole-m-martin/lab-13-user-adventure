@@ -1,0 +1,54 @@
+body {
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #ee277aff, #dad435ff);
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: "Faster One", cursive;
+}
+
+.title {
+  border: 2px #53c3b7ff solid;
+  padding: 10px;
+  background: #ee277aff;
+  color: #53c3b7ff;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #453967ff;
+  letter-spacing: 5px;
+  border-radius: 5px;
+}
+
+h1 {
+  font-family: "Orbitron";
+  font-size: 2rem;
+  color: #453967ff;
+}
+
+h5 {
+  color: #453967ff;
+}
+
+img {
+  height: 300px;
+  width: 300px;
+  border-radius: 10px;
+  border: 2px #53c3b7ff solid;
+  margin: 15px;
+}
+
+.quest-box {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-box {
+  font-family: "Orbitron";
+  margin-top: 25px;
+  width: 50%;
+  text-align: center;
+  font-size: 18px;
+}

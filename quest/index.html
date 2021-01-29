@@ -4,13 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="./questStyle.css" />
     <title>Your Space Quests!</title>
   </head>
 
@@ -18,19 +25,22 @@
     <header></header>
     <main>
       <section class="main-section">
-        <h2>Choose Wisely</h2>
+        <h2 class="title">Choose Wisely</h2>
         <div class="quest-box">
           <h1></h1>
           <img />
-          <h3></h3>
-          <form action=""></form>
+          <div class="text-box">
+            <h5></h5>
+          </div>
+          <form></form>
+          <div id="results">
+            <span id="results-span"></span>
+            <button id="map-btn">Head Back To Space Travel...</button>
+          </div>
         </div>
       </section>
     </main>
-    <footer>
-      <div class="copy gutter-right">&copy; 2021 Space Quest Game</div>
-    </footer>
 
-    <script type="module" src="spaceMap.js"></script>
+    <script type="module" src="./quest.js"></script>
   </body>
 </html>
