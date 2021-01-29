@@ -52,3 +52,9 @@ img {
   text-align: center;
   font-size: 18px;
 }
+
+span {
+  font-family: "Orbitron";
+  font-size: 14px;
+  color: #7c2065ff;
+}
