@@ -3,8 +3,6 @@ import { getPlayer, PLAYER } from '../utils.js';
 
 const ul = document.querySelector('ul');
 
-let allQuestsDone = true;
-
 
 for (let quest of quests) {
     const li = document.createElement('li');
@@ -22,12 +20,19 @@ for (let quest of quests) {
     ul.append(li);
 }
 
-for (let quest of quests) {
-    if (!user.completed[quest.id]) {
-        allQuestsDone = false;
-    }
-}
+const player = getPlayer(PLAYER);
 
-if (user.hp <= 0 || allQuestsDone) {
+
+function playerFinishedQuests(player) {
+    for (let quest of quests) {
+        if (!player.completed[quest.id]) {
+            return false;
+        }
+    }
+    return true;
+} 
+
+
+if (player.hp <= 0 || playerFinishedQuests(player)) {
     window.location = '../results';
-}
+} 

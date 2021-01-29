@@ -1,39 +1,43 @@
-import { findById } from '../app.js';
 import quests from '../data.js';
+import { findById } from '../utils.js';
+
+
 
 
 const h1 = document.querySelector('h1');
-const image = document.querySelector('section img');
 const h5 = document.querySelector('h5');
 const form = document.querySelector('form');
+const image = document.querySelector('section img');
 const mapButton = document.querySelector('#map-btn');
-const resultsSpan = document.querySelector('#results-span');
-// const results = document.querySelector('#results');
+const answer = document.querySelector('#results-span');
+
+
 
 const params = new URLSearchParams(window.location.search);
-const questId = params.get('id');
-// if (!quest) {
-//     window.location = '../spaceMap';
-// }
+const id = params.get('id');
 
-const quest = findById(quests, questId);
+const quest = findById(quests, id);
 
 h1.textContent = quest.title;
 h5.textContent = quest.description;
 image.src = `../images/${quest.image}`;
 
+
 for (let choice of quest.choices) {
     const radio = document.createElement('input');
     const label = document.createElement('label');
     const span = document.createElement('span');
+    
+
     span.textContent = choice.description;
 
     radio.type = 'radio';
-    radio.value = 'choice.id';
+    radio.value = choice.id;
     radio.name = 'choices';
-
-    label.append(span, radio);
+  
     form.append(label);
+    label.append(radio, span);
+    
 }
 
 const button = document.createElement('button');
@@ -43,43 +47,46 @@ form.appendChild(button);
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    const formData = new FormData(form);
+    const choiceId = formData.get('choices');
+    const choice = findById(quest.choices, choiceId);
     
-    const spaceData = new FormData(form);
-    const clickedId = spaceData.get('choices');
-    const choice = findById(quest.choices, clickedId);
-    resultsSpan.textContent = choice.result;
+    const player = JSON.parse(localStorage.getItem('PLAYER'));
 
-});          
+    answer.textContent = choice.result;
 
+    player.completed[quest.id] = true;
+    localStorage.setItem('PLAYER', JSON.stringify(player));
 
-
-
-
-
-
+    player.bitcoin += choice.bitcoin;
+    player.hp += choice.hp;
+    
+}); 
 
 
 
+mapButton.addEventListener('click', () => {
+    window.location = '../spaceMap';
+});
 
 
 
-    // playerScore(choice);
 
 
-// function playerScore(choice, quest) {
-//     const player = JSON.parse(localStorage.getItem('PLAYER'));
-//     player.hp = player.hp + choice.hp;
-//     player.bitcoin = player.bitcoin + choice.bitcoin;
-//     player.complete[quest.id] = true;
-//     localStorage.setItem(JSON.stringify(player));
-// }
+
+
+
+
+
+
+
+
 
     
     
 
 
-
-    // window.location = '../spaceMap/index.html';
 
 
 

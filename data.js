@@ -45,7 +45,7 @@ const enemy = {
     },
     image: 'enemy-fleet.png',
     description: `
-      Flying through space to collect space junk, you see a fleet of ships in the distance...as they get closer you realize it's your mortal enemy....The Zinertax. They notice you, lock in on your ship and raise their weapons...what do you do next?`,
+      Flying around to collect space junk, you see a fleet of ships in the distance...as they get closer you realize it's your mortal enemy....The Zinertax. They notice you, lock in on your ship and raise their weapons...what do you do next?`,
     choices: [{
         id: 'escape',
         description: 'Kick it into hyper-drive and run',
